@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap'); 
+
+
+html {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/* iPhone 11: 414, iPhone SE: 320; */
+/* 414 * 0.95 = 393.3 */
+/* 414 * 0.9 = 372.6 */
+/* 414 * 0.85 = 351.9 */
+/* 414 * 0.8 = 331.2 */
+/* 414 * 0.75 = 310.5 */
+
+@media (max-width: 413px) {
+  html {zoom: 95%;}
+}
+@media (max-width: 393px) {
+  html {zoom: 90%;}
+}
+@media (max-width: 372px) {
+  html {zoom: 85%;}
+}
+@media (max-width: 351px) {
+  html {zoom: 80%;}
+}
+@media (max-width: 331px) {
+  html {zoom: 75%;}
+}
+
+
+
+
+body {
+  color: #34495e;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
+
+a {
+  color: #34495e;
+  text-decoration: none;
+}
+
+.top {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeBar {
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  column-gap: 2%;
+  align-items: center;
+
+  width: 414px;
+  height: 20px;
+  
+  margin-top: 5px;
+  margin-bottom: 5px;
+  
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+
+
+.timeBarUnit {
+  height: 15px;
+  background-color: #88a;
+  border-radius: 7px;
+
+}
+
+.timeBarUnit:nth-child(6n) {
+  height: 20px;
+
+}
+
+
+/*
+.timeBar {
+  width: 100%;
+  height: 30px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  
+  margin-left: 0.1%;
+  margin-right: 0.1%;
+}
+
+
+.timeBarUnit {
+  width: 4%;
+  height: 30px;
+  
+  margin-left: 0.1%;
+  margin-right: 0.1%;
+  
+  background-color: #88a;
+  
+
+}
+
+*/
+
+
+.divAddBookmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  height: 100px;
+  background-image: linear-gradient(to bottom, #111, #222, #222, #111);
+}
+
+.divAddBookmark > div {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.groupInput {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  
+  flex-direction: column;
+  
+  height: 90px;
+}
+
+.inputTitle, .inputUrl {
+  /*padding: 20px 10px; */
+  width: 200px;
+  height: 30px;
+  
+  margin-top: 2px;
+  margin-bottom: 2px;
+  
+  font-size: 1rem;
+  
+  
+  box-sizing: border-box;
+}
+
+
+.groupColor{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  
+  width: 84px;
+  height: 84px;
+}
+
+.groupColor > div {
+  width: 24px;
+  height: 24px;
+  
+  border-radius: 8px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.groupColor input {
+  opacity: 0.5;
+}
+
+
+.btnAddBookmark {
+  width: 36px;
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  font-size: 2rem;
+  font-weight: 700;
+  
+  border-width: 1px;
+  border-style: solid;
+  border-color: #fff;
+  border-radius: 8px;
+  
+  color: #fff;
+}
+
+
+
+
+.divListWebsite {
+  margin-top: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  flex-wrap: wrap;
+  
+}
+
+
+
+.itemWebsite {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.4rem;
+  
+  width: 170px;
+  height: 70px;
+  
+  box-sizing: border-box;
+  
+  margin: 5px;
+  padding: 10px;
+  
+  border-radius: 13px;
+  
+  
+  box-shadow: 0px 0px 2px 0px #ccc;
+  /* background-image: linear-gradient(to bottom, #ffffff , #f9f9f9); */
+  
+  
+}
+
+.itemWebsite a {
+  color: #fff;
+  
+  word-break: break-all;
+}
+
+.leftItem {
+  width: 120px;
+  overflow-y: scroll;
+  
+}
+
+.rightItem {
+  
+  width: 40px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.iconDelete {
+  width: 30px;
+  height: 30px;
+  fill: #fff;
+  opacity: 0.7;
+}
+
+.iconEdit {
+  width: 22px;
+  height: 22px;
+  fill: #fff;
+  opacity: 0.7;
+}
+
+
+/*
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: fadeIn 0.5s linear;
+}
+*/
